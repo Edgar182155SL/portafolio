@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--Edgardo Saucedo López 182155-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+</head>
+<body background="Ropa.png" style="background-repeat: repeat; background-size: 100%; background-attachment: fixed;"></body>
+<body>
+    <h1 align="center">Tienda de ropa online</h1>
+    <form action="" method="post" enctype="text/plain">
+     <fieldset>
+        <legend>Información del cliente</legend>
+     <table style="width: 60%">
+      <tbody>
+      <td><label for="usuario">Nombre:</label><br/>
+      <input type="text" placeholder="Nombre" name="nombre" id="nombre" maxlength="25" required/></td>
+
+      <td><label for="ap">Apellido paterno</label><br/>
+      <input type="text" placeholder="Apellido paterno" name="ap" id="ap" maxlength="25" required/></td>
+
+      <td><label for="apm">Apellido materno</label><br/>
+      <input type="text" placeholder="Apellido materno" name="m" id="m" maxlength="25" required/></td>
+       
+      <tr>
+      <td><label for="nombre">Nombre de usuario:</label><br/>
+      <input type="text" placeholder="Usuario" maxlength="12" name="usuario" id="usuario"/></td>
+
+      <td><label for="pass">Contraseña:</label><br/>
+      <input type="password" placeholder="Password" name="pass" id="pass" required/></td>
+      </tr>
+      </tbody>
+     </table>
+     </fieldset>
+
+     <fieldset>
+        <legend>Datos de facturación</legend>
+     <table style="width: 60%">
+      <tbody>
+      <td><label for="calle">Calle:</label><br/>
+      <input type="text" placeholder="Usuario" name="calle" id="calle" maxlength="12"/></td>
+
+      <td><label for="num">Num:</label><br/>
+      <input type="text" placeholder="Num. Exterior" name="número" id="número" maxlength="4"/></td>
+
+      <td><label for="colonia">Colonia:</label><br/>
+      <input type="text" placeholder="Colonia" name="colonia" id="colonia" maxlength="25"/></td>
+       
+      <tr>
+      <td><label for="e-mail">E-mail:</label><br/>
+      <input type="text" placeholder="E-mail" name="e-mail" id="e-mail" maxlength="12" required/></td>
+
+      <td><label for="C.P.">Código Postal:</label><br/>
+      <input type="text" placeholder="C.P." name="cp" id="pass" maxlength="12"/></td>
+
+      <td><label for="rfc">RFC:</label><br/>
+      <input type="text" placeholder="RFC" name="rfc" id="rfc" maxlength="12" required/></td>
+      </tr>
+
+      <td><label for="fechaventa">Fecha de la venta:</label>
+      <input type="date" name="fechaventa" id="fechaventa"/></td>
+
+      </tbody>
+     </table>
+     </fieldset>
+
+     <fieldset>
+        <legend>Datos del artículo adquirido</legend>
+     <table style="width: 60%">
+      <tbody>
+     
+        <td><label for="tipo">Tipo</label><br/>
+          <select size="5" multiple>
+                <option>Vestido</option>
+                <option>Falda</option>
+                <option>Pantalón</option>
+                <option>Playera</option>
+                <option>Camisa</option>
+                <option>Chamarra</option>
+                <option>Calcetines</option>
+                <option>Cinturón</option>
+                <option>Brasier</option>
+                <option>Calzón</option>
+          </select></td>
+
+        <td><label for="talla">Talla</label><br/>
+            <input type="checkbox" name="chico" id="chico" value="chico"/>
+            <label for="chico">Chico</label><br/>
+      
+            <input type="checkbox" name="mediano" id="mediano" value="mediano"/>
+            <label for="mediano">Mediano</label><br/>
+      
+            <input type="checkbox" name="grande" id="grande" value="grande"/>
+            <label for="grande">Grande</label><br/>
+        </td>
+
+        <td><label for="colores">Selecciona el Color</label><br/>
+        <input type="color" name="colores" id="colores"/><br/><br/>
+
+        <input type="submit" name="enviar" id="enviar" value="Enviar datos"/>
+        <input type="reset" name="borrar" id="borrar" value="Borrar datos"/></td>
+
+      </tbody>
+     </table>
+     </fieldset>
+     
+     <h3 align="right">&copy;Distribuidora de ropa en línea 2023.</h3>
+    </form>
+</body>
+</html>
