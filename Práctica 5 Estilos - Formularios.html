@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--Edgardo Saucedo López 182155-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 5 Estilos - Formularios</title>
+    <link rel="stylesheet" href="Práctica 5 Estilos - Formularios.css	"/>
+</head>
+<body>
+    <h1 class="titulo">Servicios de Internet y Telefonía</h1></br>
+    <h2 id="subtitulo1">Contrato de servicios</h2>
+   <form action="" method="post" enctype="text/plain">
+        <fieldset>
+           <legend>Datos del cliente</legend>
+        <div id="tabla1">
+        <table align="center">
+         <tbody>
+         <td><label for="usuario">Nombre:</label><br/>
+         <input type="text" class="control" placeholder="Nombre" name="nombre" id="nombre" maxlength="15" required/></td>
+   
+         <td><label for="ap">Apellido paterno</label><br/>
+         <input type="text" class="control" placeholder="Apellido paterno" name="ap" id="ap" maxlength="15" required/></td>
+   
+         <td><label for="apm">Apellido materno</label><br/>
+         <input type="text" class="control" placeholder="Apellido materno" name="m" id="m" maxlength="15" required/></td>
+          
+         <tr>
+            <td><label for="ciudad">Ciudad</label><br/>
+                <select size="7" multiple>
+                      <option>San Luis Potosí</option>
+                      <option>Matehuala</option>
+                      <option>Cd. Valles</option>
+                      <option>Querétaro</option>
+                      <option>Guanajuato</option>
+                </select></td>
+         </tr>
+         </tbody>
+        </table>
+        </div>
+        </fieldset>
+   
+        <fieldset>
+           <legend>Servicio a contratar</legend>
+        <table align="center">
+         <tbody>
+         <td><label for="servicio" class="selección">Selecciona el tipo de servicio a contratar</label><br/>
+
+         <label for="línea" class="servicio">Línea Telefónica</label>
+         <input type="checkbox" name="línea" id="línea" value="línea" checked/>
+         <span style="padding-right:150px;"></span>
+   
+         <label for="internet" class="servicio">Servicio de Internet</label>
+         <input type="checkbox" name="internet" id="internet" value="internet" checked/></br>
+        </tbody>
+        </table>
+        </fieldset>
+   
+        <fieldset>
+           <legend>Forma de pago</legend>
+        <table align="center">
+         <tbody>
+           <td><label for="forma" class="forma">Elige la forma de pago</label><br/>
+               <div id="pago">
+               <label for="pago" id="pago1">TDC:</label>
+               <input type="radio" name="pago" value="pago"/><br/>
+         
+               <label for="pago" id="pago2">Tarjeta Débito:</label>
+               <input type="radio" name="pago" value="pago" checked/><br/>
+         
+               <label for="pago" id="pago3">Pago en Efectivo:</label>
+               <input type="radio" name="pago" value="pago"/><br/>
+
+               <label for="pago" id="pago4">Pago mediante Cheque:</label>
+               <input type="radio" name="pago" value="pago"/><br/>
+
+               <label for="pago" id="pago5">Transferencia bancaria:</label>
+               <input type="radio" name="pago" value="pago"/><br/>
+
+               <label for="pago" id="pago6">Depósito bancario:</label>
+               <input type="radio" name="pago" value="pago"/><br/>
+
+               <label for="pago" id="pago7">Pago en Oxxo:</label>
+               <input type="radio" name="pago" value="pago"/><br/><br/>
+               </div>
+
+               <input type="submit" id="datos" name="enviar" id="enviar" value="Enviar datos"/>
+               <input type="reset" id="datos" name="borrar" id="borrar" value="Borrar datos"/>
+           </td>
+   
+         </tbody>
+        </table>
+        </fieldset>
+        
+        <h1 class="práctica">Práctica 5</h1><br/>
+        <h2 class="práctica">HTML5 - CSS</h2><br/>
+        <h2 class="práctica">Primavera 2023</h2><br/>
+
+       </form>
+
+</body>
+</html>
