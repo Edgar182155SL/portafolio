@@ -1,0 +1,7 @@
+.contorno{
+    border: 1px solid black;
+    outline-style: dotted;
+    outline-color: red;
+    outline-width: thick;
+    outline-offset: 10px;
+}
