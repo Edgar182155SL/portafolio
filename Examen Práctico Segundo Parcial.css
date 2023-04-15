@@ -1,0 +1,95 @@
+#encabezado1
+{
+    display: block;
+    width: 200px;
+    padding: 1px;
+    border: 1px solid #999999;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    margin: 10px auto;
+    background: #ffffff;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: "fuente1";
+    src: url("Fuentes/Nunito-Regular.ttf") format("truetype");
+}
+
+#titulo1
+{
+    font-family: "fuente1", sans-serif;
+    font-size: larger;
+    font-style: italic;
+    color: #000000;
+}
+
+@font-face {
+    font-family: "fuente2";
+    src: url("Fuentes/Roboto.ttf") format("truetype");
+}
+
+#titulo2
+{
+    font-family: 'Rubik', sans-serif;
+    font-size: small;
+    color: #ffffff;
+}
+
+#servicio
+{
+    font-family: "fuente2", serif;
+}
+
+#header
+{
+  margin: none;
+  width: 200px;
+}
+
+ul
+{
+  list-style: none;
+}
+
+.nav li 
+{
+  background-color: #308101;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+
+}
+
+.nav li a:hover
+{
+  background-color:#17d06d;
+  cursor: crosshair;
+}
+
+.nav > li
+{
+   float: right;
+}
+
+.nav li ul
+{
+    display: none;
+    position: absolute;
+    min-width: 200 px;
+
+}
+
+.nav li:hover > ul 
+{
+  display:block;
+}
+
+.nav li ul li
+{
+  position: relative;
+}
