@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--Edgardo Saucedo López 182155-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFC</title>
+    <script src="Práctica 4 RFC.js"></script>
+    <link rel="stylesheet" href="Práctica 4 RFC.css"/>
+</head>
+<body>
+	<form>
+        <div>
+		<label for="nombre">Escribe tu nombre</label>
+        </div>
+		<input type="text" name="nombre" id="nombre">
+
+        <div>
+		<label for="apellido p">Escribe tu apellido paterno</label>
+        </div>
+		<input type="text" name="apellido p" id="apellido p">
+
+        <div>
+		<label for="apellido m">Escribe tu apellido materno</label>
+        </div>
+		<input type="text" name="apellido m" id="apellido m">
+
+        <div>
+		<label for="anio">Escribe tu año de nacimiento</label>
+        </div>
+		<input type="number" name="anio" id="anio">
+        
+        <div>
+		<label for="mes">Escribe tu mes de nacimiento</label>
+        </div>
+		<input type="number" name="mes" id="mes">
+        
+        <div>
+        <label for="dia">Escribe tu día de nacimiento</label>
+        </div>
+		<input type="number" name="dia" id="dia">
+
+        <div>
+        <label for="resultado">Resultado:</label>
+        </div>
+        <p id="resultado" name="resultado"></p>
+
+		<input type="button" name="boton" id="boton" onclick="generarfc()" value="Generar RFC">
+	</form>
+</body>
+</html>
