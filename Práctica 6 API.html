@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Web Storage</title>
+    <link rel="stylesheet" href="Práctica 6 API.css"/>
+    <script src="Práctica 6 API.js"></script>
+</head>
+<body>
+    <h1>API Web Storage</h1>
+
+    <h2>¿Qué es API Web Storage?</h2></b>
+    <p>Una API de almacenamiento web es una interfaz de programación de aplicaciones que permite a los desarrolladores acceder y 
+    manipular el almacenamiento en el navegador web. Proporciona métodos y funciones para crear, leer, actualizar y eliminar datos en el 
+    almacenamiento del navegador, lo que permite a las aplicaciones web almacenar y recuperar información localmente en el dispositivo 
+    del usuario.</p>
+
+    <h2>Tipos principales de almacenamiento web</h2></b>
+    <ol type="1" start="1">
+    <li><p>Almacenamiento local: Esto permite a las aplicaciones web almacenar datos en el navegador del usuario de forma persistente. Los 
+    datos almacenados localmente no se eliminan después de cerrar el navegador y están disponibles incluso cuando el usuario vuelve a 
+    visitar la misma página web en el futuro.</p></li></b>
+    <li><p>Almacenamiento de sesión: Este tipo de almacenamiento es similar al almacenamiento local, pero los datos se eliminan cuando se 
+    cierra la sesión del navegador o se cierra la pestaña actual. El almacenamiento de sesión es útil para almacenar información 
+    temporalmente mientras el usuario navega por una aplicación web, pero no requiere almacenamiento persistente.</p></li></b>
+    </ol>
+
+    <p>Esta API es de gran importancia en el desarrollo de aplicaciones web por varias razones:</p>
+    <ol type="1" start="1">
+    <li><p>Almacenamiento de datos local: Permite a las aplicaciones web almacenar datos localmente en el navegador del usuario. Esto es 
+    útil para almacenar preferencias del usuario, configuraciones personalizadas y otra información relevante que se pueda utilizar en 
+    futuras visitas al mismo sitio web.</p></li>   
+    <li><p>Menor dependencia de los servidores: Al utilizar el almacenamiento web, las aplicaciones pueden reducir su dependencia de los 
+    servidores para almacenar y recuperar datos.</p></li>
+    <li><p>Mejora de la velocidad y la capacidad de respuesta: Almacenar datos localmente en el navegador permite un acceso más rápido a 
+    la información. No es necesario realizar solicitudes al servidor para cada interacción, lo que puede mejorar la velocidad y la 
+    capacidad de respuesta de la aplicación.</p></li>
+    <li><p>Funcionamiento sin conexión: La API de almacenamiento web permite que las aplicaciones web funcionen sin conexión a Internet. 
+    Al almacenar datos localmente, la aplicación puede continuar funcionando y mostrando información relevante incluso cuando no hay 
+    conectividad.</p></li>
+    <li><p>Mayor privacidad y seguridad: El almacenamiento web se limita al dominio y al origen que lo creó. Esto significa que los datos 
+    almacenados en el navegador no son accesibles por otros sitios web, lo que mejora la privacidad y la seguridad de la información del 
+    usuario. </p></li>
+    </ol>
+
+    <h2>Implementación</h2></b>
+
+    <section id="cajaformulario">
+        <form name="formulario">
+        <p class="seccion">Nombre:<br><input type="text" name="nombre" id="nombre"></p>
+        <p class="seccion">Edad:<br><textarea name="edad" id="edad"></textarea></p>
+        <p><input type="button" name="grabar" id="grabar"
+        value="Guardar información"></p>
+        </form>
+        </section>
+        <section id="cajadatos">
+        Aún no registras información
+    </section>
+    
+</body>
+</html>
