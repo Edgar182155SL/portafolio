@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+    <link rel="stylesheet" href="Actividad 2.css"> <!--Se enlaza una hoja de estilos CSS llamada "Actividad 2.css"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+</head>
+<script>  //El script contiene una función llamada califica(), que se ejecuta cuando se hace clic en el botón "Calificar".
+var total;
+function califica() //Se declara una variable "total" para almacenar la puntuación total del usuario.
+{ var total=0; //Dentro de la función "califica()", se inicializa la variable "total" a 0.
+    	for (var x=1;x<=5;x++) //Se realiza un bucle "for" del 1 al 5 (correspondiente a las preguntas del test).
+    	{
+        var res=0; //Dentro del bucle, se inicializa una variable res a 0.
+        var nom="r"+x;  
+		var resul=document.getElementsByName(nom); //Se construye un nombre de elemento (nom) usando el valor de x para acceder a los elementos de radio button del formulario.
+        //Se obtienen los elementos de radio button con el nombre nom utilizando la función getElementsByName().
+
+		for(var i=0;i<resul.length;i++)//Dentro del bucle, se recorren los elementos de radio "button" obtenidos y se verifica si 
+		//alguno de ellos está marcado (checked == true). Si se encuentra un elemento marcado, se asigna su valor 
+		//a la variable res después de convertirlo a un número entero utilizando parseInt().
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res; //Tras obtener la puntuación de la pregunta actual, se suma al total acumulado en la variable total. 
+		//Después, se actualiza el contenido del elemento con el id "total" para mostrar la puntuación parcial al usuario.
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }//Después de terminar el bucle, se realizan comprobaciones condicionales para determinar la puntuación total y mostrar un 
+		//mensaje correspondiente al usuario. Dependiendo del valor de total, se selecciona el elemento con el id "comentario" y se 
+		//actualiza su contenido para mostrar un mensaje específico.
+        if(total==25)
+        	document.getElementById("comentario").innerHTML="Felicitaciones Spartan, en verdad tu entrenamiento dio frutos. Sigue así y llegarás a ser el salvador de la humanidad.";
+        else
+        	if(total==20)
+        	document.getElementById("comentario").innerHTML="Bien hecho soldado, sólo mantente al tanto de tu misión.";
+		else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Completaste la misión pero aún hay errores por corregir teniente.";
+
+        else
+        	if(total<=10)
+        	document.getElementById("comentario").innerHTML="Lo siento cadete. Sigue entretenando y quizás el enemigo te considere una verdadera amenaza.";
+    }
+
+ 
+</script>
+
+<body background="Halo.webp"style="background-repeat: no-repeat; background-size: 100%; background-attachment: fixed;">
+	<!--El atributo background de la etiqueta <body> establece la imagen de fondo utilizando el archivo "Halo.webp".-->
+	<h1>Test de Halo</h1>
+	<h2>¿Qué tanto sabes de Halo? Prueba tus conocimientos en este pequeño test. Es hora de demostrar de que estás hecho, Spartan.</h2>
+<form>
+<div id="test">
+	<!--El formulario contiene una lista (<ul>) que contiene las preguntas y las opciones de respuestas.-->
+	<ul>
+
+		<li>¿En qué año se lanzó el primer título de la franquicia?</li>
+		<input type="radio" name="r1" id="r1" value="5"/>2001<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>1999<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>2002<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>2000<br/>
+		
+		<li>¿Cuál fue la última entrega de la saga desarollada por Bungie Studios?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Halo 4<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Halo Wars<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Halo Reach<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Halo: Combat Evolved Anniversary<br/>
+
+		<li>¿Qué especie son los Élites?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Kig-yar<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Sangheili<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Lekgolo<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Unggoy<br/>
+
+        <li>Este título es conocido por implementar el modo de juego Tiroteo:</li>
+		<input type="radio" name="r4" id="r4" value="5"/>Halo 3 ODST<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Halo 2<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Halo: Spartan Assault<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Halo 5: Guardians<br/>
+
+        <li>¿Cuál es la dictadura teocrática que tiene como objetivo principal exterminar la raza humana?</li>
+        <input type="radio" name="r5" id="r5" value="0"/>Flood<br/>
+        <input type="radio" name="r5" id="r5" value="0"/>Forerunner<br/>
+        <input type="radio" name="r5" id="r5" value="0"/>Zealots<br/>
+        <input type="radio" name="r5" id="r5" value="5"/>Covenant<br/>
+	</ul>
+	
+</div>
+<input type="button" value="Calificar" onclick="califica()"> 
+<!--El botón "Calificar" ejecuta la función califica() cuando se hace clic en él.-->
+</form>
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</body>
+</html>
