@@ -7,6 +7,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
 </head>
+
+<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="jspdf.js"></script>
+<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+	
 <script>  //El script contiene una función llamada califica(), que se ejecuta cuando se hace clic en el botón "Calificar".
 var total;
 function califica() //Se declara una variable "total" para almacenar la puntuación total del usuario.
@@ -45,6 +54,28 @@ function califica() //Se declara una variable "total" para almacenar la puntuaci
         	document.getElementById("comentario").innerHTML="Lo siento cadete. Sigue entretenando y quizás el enemigo te considere una verdadera amenaza.";
     }
 
+	function generar(){
+		//Crear un nuevo objeto o instancia jsPDF
+	var doc = new jsPDF();
+
+	doc.setFontSize(40);
+    //color de texto
+    doc.setTextColor(9,7,121);
+    doc.text(40,20,"Encuesta");
+    doc.setTextColor(17,122,209);
+    doc.setFontSize(30);
+    doc.text(50,35,"¿Qué tanto sabes?");//ubicacion,
+    doc.setTextColor(0,0,0);
+    doc.setFontSize(20);
+    doc.text(20,50,"25 puntos: Perfecto. \r 5 respuestas correctas");
+    doc.text(20,70,"20 puntos: Excelente. \r 4 respuestas correctas");
+    doc.text(20,90,"15 puntos: Muy bien. \r 3 respuestas correctas");
+    doc.text(20,110,"10 puntos: Regular. \r 2 respuestas correctas");
+    doc.text(20,130,"5 puntos o menos: Estudia mas. \r 1 o ninguna respuesta correcta");
+ 
+    var string=doc.output('datauristring');
+	$('iframe').attr('src',string);
+}
  
 </script>
 
@@ -91,6 +122,7 @@ function califica() //Se declara una variable "total" para almacenar la puntuaci
 </div>
 <input type="button" value="Calificar" onclick="califica()"> 
 <!--El botón "Calificar" ejecuta la función califica() cuando se hace clic en él.-->
+<input type="button" value="Generar PDF" onclick="generar()">
 </form>
 <p></p>
 <p id="total">   </p>
