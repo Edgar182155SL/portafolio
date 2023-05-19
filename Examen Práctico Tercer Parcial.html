@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Examen Práctico Tercer Parcial.css">
+    <script src="Examen Práctico Tercer Parcial.js"></script>
+    <title>Examen Práctico Tercer Parcial</title>
+</head>
+
+<body>
+    <h1>Puedes obtener producto gratis!</h1></br>
+    
+    <form method="post" action="" enctype="text/plain">
+        <label for="nombre">Tu nombre:</label></br>
+        <input type="text" name="nombre" id="nombre"/>
+    </form>
+
+    <h2>Tu fecha de cumpleaños</h2>
+    <input type="number" id="mesCumpleanos" min="1" max="12">
+    <button onclick="verificarCumpleanos()">Verificar</button>
+
+    <div id="descuentoContainer" style="display: none;">
+        <h2 id="descuentoMensaje"></h2>
+        <img src="" id="imagenDescuento" alt="Descuento">
+      </div>
+    
+      <div id="noDescuentoContainer" style="display: none;">
+        <h2>No obtienes descuento en tu compra en este momento.</h2>
+      </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+*
+{
+    margin: 15px 10px
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: left;
+    color: #000000;
+}
+
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: left;
+    color: #000000;
+}
+
+h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 10px;
+    text-align: left;
+    color: #000000;
+}
+
+#nombre
+{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: inherit;
+  font-size: 15px;
+  text-align: left;
+  color: #000000;
+}
+
+#fecha
+{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: inherit;
+  font-size: 15px;
+  text-align: left;
+  color: #000000;
+}
+
+#boton
+{
+    background-color: #b6249e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    width: 400px;
+    height: 50px;
+}
